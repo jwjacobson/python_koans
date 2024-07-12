@@ -17,7 +17,12 @@
 #   about_triangle_project_2.py
 #
 def triangle(a, b, c):
-    # DELETE 'PASS' AND WRITE THIS CODE
+    if a < 1 or b < 1 or c < 1:
+        raise TriangleError
+
+    if a + b <= c or b + c <= a or a + c <= b:
+        raise TriangleError
+
     if a == b == c:
         return 'equilateral'
     elif a == b or b == c or a == c:
@@ -27,5 +32,4 @@ def triangle(a, b, c):
 
 # Error class used in part 2.  No need to change this code.
 class TriangleError(Exception):
-    if a < 1 or b < 1 or c < 1:
-        raise
+    pass
