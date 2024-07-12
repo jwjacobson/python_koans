@@ -27,4 +27,5 @@ def triangle(a, b, c):
 
 # Error class used in part 2.  No need to change this code.
 class TriangleError(Exception):
-    pass
+    if a < 1 or b < 1 or c < 1:
+        raise
